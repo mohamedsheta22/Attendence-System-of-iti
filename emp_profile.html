@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- stylesheet libs-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="fontawesome/all.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/main.css" />
+    <link rel="stylesheet" href="bootstrap/css/empprofile_style.css" />
+     <!--js libs-->
+     <script src="bootstrap/js/jquery-3.5.1.min.js"></script>
+     <script src="bootstrap/js/popper.min.js"></script>
+     <script src="bootstrap/js/bootstrap.min.js"></script>
+     <script src="fontawesome/all.min.js"></script>
+     <script src="bootstrap/js/main.js"></script>
+     <script src="bootstrap/js/empprofile.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="row mb-4">
+            <a href="index.html"><img src="it.png" class="col-12 col-sm-8 offset-sm-2" alt=""></a>
+        </header>
+        <div class="row p-3 empDetails">
+            <div class="col-12 col-md-5">
+                <div class="row">
+                    <h2 class="col-9" id="empName">Your Name</h2>
+                    <a class="col-3 btn logout optionlist" onclick="logout()" href="login_page.html">Logout</a>
+                    <div class="dropdown col-3">
+                        <button class="optionsBtn" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" id="profileOptions" aria-labelledby="dropdownMenuButton">
+                            <li  class="optionlist" ><a onclick="logout()" href="login_page.html">Logout</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="empDetails">
+                    <div>
+                        <label>Email: </label>
+                        <p id="profileEmail"></p>
+                    </div>
+                    <div>
+                        <label>Address: </label>
+                        <p id="profileAddress"></p>
+                    </div>
+                    <div>
+                        <label>Age: </label>
+                        <p id="profileAge"></p>
+                    </div>
+                    <div>
+                        <label>date of employment: </label>
+                        <p id="profileDoE"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 profile-reports pt-3">
+                <ul class="nav nav-tabs" id="profileReportsTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active " id="monthly-tab" data-toggle="tab" href="#monthlyReport" role="tab"
+                            aria-controls="monthly" aria-selected="true">Monthly Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="daily-tab" data-toggle="tab" href="#dailyReport" role="tab"
+                            aria-controls="daily" aria-selected="false">Daily Report</a>
+                    </li>
+                </ul>
+                <div class="tab-content pt-2">
+                    <div class="tab-pane active" id="monthlyReport" role="tabpanel" aria-labelledby="monthly-tab">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Attendance Times</th>
+                                    <th>Late Times</th>
+                                    <th>Absence Times</th>
+                                    <th>Execuse Times</th>
+                                </tr>
+                            </thead>
+                            <tbody id="monthlyReportRows">
+                                 
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="dailyReport" role="tabpanel" aria-labelledby="daily-tab">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Attendance Time</th>
+                                    <th>Departure Time</th>
+                                    <th>Late</th>
+                                    <th>Absent</th>
+                                    <th>Execuse</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dailyReportRows">
+                                 
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

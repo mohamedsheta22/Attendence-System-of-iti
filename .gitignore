@@ -1,0 +1,7 @@
+*.png
+*.jpg
+bootstrap/
+data/
+fontawesome/
+fonts/
+jqui/
